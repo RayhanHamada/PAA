@@ -1,10 +1,17 @@
+# Nama  : Muhammad Rayhan Hamada Budiman
+# NPM   : 54418853
+# Kelas : 3IA12
+# MatKul: Perancangan dan Analisis Algoritma
+
+
 hitung = 0
 h = 0
+
 
 # untuk menampilkan proses
 def tampil_proses(kiri: list, kanan: list, menaik: bool):
     global hitung, h
-    print('PROSES ', h + 1)
+    print('STEP ', h + 1)
     print(' ' * (5 * hitung), 'Nilai Kiri = ', kiri)
     print(' ' * (5 * hitung), 'Nilai Kanan = ', kanan)
     print()
@@ -106,12 +113,11 @@ def merge_sort(list_saya: list, menaik: bool):
             k += 1
 
 
-list_saya = input('Masukkan array yang ingin di sort (tiap elemen dipisah spasi): ').split()
-list_saya = [int(x) for x in list_saya]
+input_array = input('Masukkan array yang ingin di sort (tiap elemen dipisah spasi): ').split()
+input_array = [int(x) for x in input_array]
 
-print('1. Menaik\n2. Menurun')
+print('1. Menaik (Ascending)\n2. Menurun (Descending)')
 asc_atau_desc = input('Urutkan secara (masukkan nomor): ')
 
-
-merge_sort(list_saya, asc_atau_desc == '1')
-print('Hasil Akhir Sorting : ', list_saya)
+merge_sort(input_array, asc_atau_desc == '1')
+print('Hasil Akhir Sorting : ', input_array)
